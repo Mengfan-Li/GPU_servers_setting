@@ -1,7 +1,7 @@
 # GPU_servers_setting
 Server configuration operation and installation package
 
-## XJTLU
+## XJTLU (2021.1)
 server configuration：  
 ~  Quadro RTX 6000 *3  
 ~  CUDA 10.1  
