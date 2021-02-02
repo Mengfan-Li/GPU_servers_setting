@@ -15,7 +15,8 @@ Since the server is located in the school’s intranet, a relay server is needed
 
 Then the following command:  
 Configure SSH: `ssh -J st_010@10.7.88.28 st_010@192.168.100.29 -R 18001`
-Text: `p curl baidu.com ` if return  <meta http-equiv="refresh" content="0;url=http://www.baidu.com/"> is correct
+Text: `p curl baidu.com ` 
+&ensp;&ensp;if return `<meta http-equiv="refresh" content="0;url=http://www.baidu.com/">` is correct
 
 
 
