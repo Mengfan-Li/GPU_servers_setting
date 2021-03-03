@@ -2,7 +2,7 @@
 Server configuration operation and installation package
 
 ## XJTLU (2021.1)
-###windows
+windows：
 server configuration：  
 ~  Quadro RTX 6000 *3  
 ~  CUDA 10.1  
@@ -21,6 +21,13 @@ Text: `p curl baidu.com `
 
 ----
 
-###Linux
+Linux：
+Because the school's server in the intranet has a relay server (springboard) in the middle, it needs to be reset.
+Reference：https://www.jianshu.com/p/8f262bc444f0
+~ Ubuntu 18.04
+~ Oracle Virtual Box
+
+Step1：Configure springboard machine password-free login
+
 
 
