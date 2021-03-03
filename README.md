@@ -2,7 +2,7 @@
 Server configuration operation and installation package
 
 ## XJTLU (2021.1)
-windows：
+windows：  
 server configuration：  
 ~  Quadro RTX 6000 *3  
 ~  CUDA 10.1  
@@ -21,13 +21,32 @@ Text: `p curl baidu.com `
 
 ----
 
-Linux：
-Because the school's server in the intranet has a relay server (springboard) in the middle, it needs to be reset.
-Reference：https://www.jianshu.com/p/8f262bc444f0
-~ Ubuntu 18.04
-~ Oracle Virtual Box
+Linux：  
+Because the school's server in the intranet has a relay server (springboard) in the middle, it needs to be reset.  
+Reference：https://www.jianshu.com/p/8f262bc444f0  
+~ Ubuntu 18.04  
+~ Oracle Virtual Box  
 
-Step1：Configure springboard machine password-free login
+Step1：Configure springboard machine password-free login  
+Local configuration:`vim ~/.ssh/config `  
+Enter the following in the config file: 
+`Host *
+    ControlPersist yes
+    ControlMaster auto
+    ControlPath ~/.ssh/%n:%p`  
+After completing the configuration, log in to the springboard machine locally.  
+
+Stp2:Set up ssh tunnel  
+Enter the following command on the local command line:`ssh -N -f -L 6000:<intranet server ip>:22 -p <springboard port> username@<springboard ip> -o TCPKeepAlive=yes`  
+The meaning of each parameter of the above command is as follows:  
+-N tells the SSH client that this connection does not need to execute any commands. Just do port forwarding  
+-f tells the SSH client to run in the background  
+-L do local mapping port  
+At this point, logging in to the local 6000 port is equivalent to logging in to the intranet server.  
+`ssh -p 6000 server username@localhost`  
+
+Step3:Configure pycharm  
+Here you only need to configure the ip to `127.0.0.1`, the port to `6000`, and enter the account password of the intranet server to see the python installed on the server.
 
 
 
