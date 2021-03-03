@@ -2,6 +2,7 @@
 Server configuration operation and installation package
 
 ## XJTLU (2021.1)
+###windows
 server configuration：  
 ~  Quadro RTX 6000 *3  
 ~  CUDA 10.1  
@@ -20,5 +21,6 @@ Text: `p curl baidu.com `
 
 ----
 
+###Linux
 
 
