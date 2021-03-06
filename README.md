@@ -46,7 +46,11 @@ At this point, logging in to the local 6000 port is equivalent to logging in to 
 `ssh -p 6000 server username@localhost`  
 
 Step3:Configure pycharm  
-Here you only need to configure the ip to `127.0.0.1`, the port to `6000`, and enter the account password of the intranet server to see the python installed on the server.
+Here you only need to configure the ip to `127.0.0.1`, the port to `6000`, and enter the account password of the intranet server to see the python installed on the server.  
+  
+My personal seeting:  
+`ssh -N -f -L 6010:192.168.100.29:22 st_010@10.7.88.28 -o TCPKeepAlive=yes`  
+`ssh -p 6012 st_010@localhost`
 
 
 
