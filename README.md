@@ -49,8 +49,11 @@ Step3:Configure pycharm
 Here you only need to configure the ip to `127.0.0.1`, the port to `6000`, and enter the account password of the intranet server to see the python installed on the server.  
   
 My personal seeting:  
-`ssh -N -f -L 600592.168.100.29:22 st_010@10.7.88.28 -o TCPKeepAlive=yes`  
-`ssh -p 6005 st_010@localhost`
+`ssh -N -f -L 6005:192.168.100.29:22 st_010@10.7.88.28 -o TCPKeepAlive=yes`  
+`ssh -p 6005 st_010@localhost`  
+
+If you want to install the package on the server, you need to use: `ssh -J st_010@10.7.88.28 st_010@192.168.100.29 -R 18001`  
+pip commadn:`p pip <package name>`
 
 
 
